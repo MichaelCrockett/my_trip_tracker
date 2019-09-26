@@ -4,8 +4,6 @@ This is a repo for my CodeClan solo project, which takes the form of an app whic
 
 ## Travel Bucket List brief
 
-Build an app to track someone's travel adventures.
-
 ### MVP:
 
  * The app should allow the user to track countries and cities they want to visit and those they have visited.
