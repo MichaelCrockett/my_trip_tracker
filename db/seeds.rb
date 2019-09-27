@@ -1,12 +1,14 @@
-require_relative( './models/cities' )
-require_relative( './models/countries' )
-require_relative( './models/sights' )
+require_relative( '../models/cities' )
+require_relative( '../models/countries' )
+require_relative( '../models/sights' )
+require_relative( '../models/bucketlist' )
 
 require( 'pry' )
 
 City.delete_all()
 Country.delete_all()
-Sights.delete_all()
+Sight.delete_all()
+BucketList.delete_all()
 
 country1 = Country.new( { 'name' => 'France' } )
 country2 = Country.new( { 'name' => 'Italy' } )
@@ -75,7 +77,6 @@ sight25 = Sight.new( {'name' => 'Alhambra Palace', 'city_id' => city9.id, 'count
 sight26 = Sight.new( {'name' => 'Albaicin District', 'city_id' => city9.id, 'country_id' => country3.id })
 sight27 = Sight.new( {'name' => 'Granada Cathedral', 'city_id' => city9.id, 'country_id' => country3.id })
 
-
 sight1.save()
 sight2.save()
 sight3.save()
@@ -103,3 +104,7 @@ sight24.save()
 sight25.save()
 sight26.save()
 sight27.save()
+
+
+bucket_list1 = BucketList.new({'sight_id' => sight1.id, 'visited' => false })
+bucket_list1.save()

@@ -20,6 +20,25 @@ class Country
     @id = SqlRunner.run( sql, values )[0]["id"].to_i()
   end
 
+  def self.all()
+    sql = "SELECT * FROM countries"
+    country_data = SqlRunner.run(sql)
+    return Country.map_items(country_data)
+  end
+
+  def update()
+      sql = "UPDATE countries
+      SET
+      (
+        name,
+      ) =
+      (
+        $1,
+      )
+      WHERE id = $2"
+      values = [@name, @id]
+      SqlRunner.run(sql, values)
+  end
 
   def self.delete_all()
     sql = "DELETE FROM countries"

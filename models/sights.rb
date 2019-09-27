@@ -27,6 +27,31 @@ class Sight
     @id = SqlRunner.run( sql, values )[0]["id"].to_i()
   end
 
+
+  def self.all()
+    sql = "SELECT * FROM sights"
+    sight_data = SqlRunner.run(sql)
+    return Sight.map_items(sight_data)
+  end
+
+
+  def update()
+      sql = "UPDATE sights
+      SET
+      (
+        name,
+        city_id,
+        country_id
+      ) =
+      (
+        $1,  $2, $3
+      )
+      WHERE id = $4"
+      values = [@name, @city_id, @country_id, @id]
+      SqlRunner.run(sql, values)
+  end
+
+
   def self.delete_all()
     sql = "DELETE FROM sights"
     SqlRunner.run(sql)
