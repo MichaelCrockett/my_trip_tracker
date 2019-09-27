@@ -1,0 +1,105 @@
+require_relative( './models/cities' )
+require_relative( './models/countries' )
+require_relative( './models/sights' )
+
+require( 'pry' )
+
+City.delete_all()
+Country.delete_all()
+Sights.delete_all()
+
+country1 = Country.new( { 'name' => 'France' } )
+country2 = Country.new( { 'name' => 'Italy' } )
+country3 = Country.new( { 'name' => 'Spain' } )
+#
+country1.save()
+country2.save()
+country3.save()
+
+
+city1 = City.new( {'name' => 'Paris', 'country_id' => country1.id } )
+city2 = City.new( {'name' => 'Marseille', 'country_id' => country1.id } )
+city3 = City.new( {'name' => 'Lyon', 'country_id' => country1.id } )
+
+city4 = City.new( {'name' => 'Rome', 'country_id' => country2.id } )
+city5 = City.new( {'name' => 'Florence', 'country_id' => country2.id } )
+city6 = City.new( {'name' => 'Naples', 'country_id' => country2.id } )
+
+city7 = City.new( {'name' => 'Barcelona', 'country_id' => country3.id } )
+city8 = City.new( {'name' => 'Madrid', 'country_id' => country3.id } )
+city9 = City.new( {'name' => 'Granada', 'country_id' => country3.id } )
+
+city1.save()
+city2.save()
+city3.save()
+city4.save()
+city5.save()
+city6.save()
+city7.save()
+city8.save()
+city9.save()
+
+sight1 = Sight.new( {'name' => 'Eiffel Tower', 'city_id' => city1.id, 'country_id' => country1.id })
+sight2 = Sight.new( {'name' => 'Notre Dame', 'city_id' => city1.id, 'country_id' => country1.id })
+sight3 = Sight.new( {'name' => 'Arc De Triomphe', 'city_id' => city1.id, 'country_id' => country1.id })
+
+sight4 = Sight.new( {'name' => 'Vieux Port', 'city_id' => city2.id, 'country_id' => country1.id })
+sight5 = Sight.new( {'name' => 'MuCem', 'city_id' => city2.id, 'country_id' => country1.id })
+sight6 = Sight.new( {'name' => 'Marseille Cathedral', 'city_id' => city2.id, 'country_id' => country1.id })
+
+sight7 = Sight.new( {'name' => 'Odeon of Lyon', 'city_id' => city3.id, 'country_id' => country1.id })
+sight8 = Sight.new( {'name' => 'Lyon Cathedral', 'city_id' => city3.id, 'country_id' => country1.id })
+sight9 = Sight.new( {'name' => 'Parc de Gerland', 'city_id' => city3.id, 'country_id' => country1.id })
+
+sight10 = Sight.new( {'name' => 'Saint Peters', 'city_id' => city4.id, 'country_id' => country2.id })
+sight11 = Sight.new( {'name' => 'Pantheon', 'city_id' => city4.id, 'country_id' => country2.id })
+sight12 = Sight.new( {'name' => 'Collosseum', 'city_id' => city4.id, 'country_id' => country2.id })
+
+sight13 = Sight.new( {'name' => 'The Duomo', 'city_id' => city5.id, 'country_id' => country2.id })
+sight14 = Sight.new( {'name' => 'Palazzo Vecchio', 'city_id' => city5.id, 'country_id' => country2.id })
+sight15 = Sight.new( {'name' => 'Ponte Vecchio', 'city_id' => city5.id, 'country_id' => country2.id })
+
+sight16 = Sight.new( {'name' => 'Naples Cathedral', 'city_id' => city6.id, 'country_id' => country2.id })
+sight17 = Sight.new( {'name' => 'Pompeii', 'city_id' => city6.id, 'country_id' => country2.id })
+sight18 = Sight.new( {'name' => 'Villa Communale', 'city_id' => city6.id, 'country_id' => country2.id })
+
+sight19 = Sight.new( {'name' => 'Nou Camp', 'city_id' => city7.id, 'country_id' => country3.id })
+sight20 = Sight.new( {'name' => 'Sagrada Familia', 'city_id' => city7.id, 'country_id' => country3.id })
+sight21 = Sight.new( {'name' => 'Park Guell', 'city_id' => city7.id, 'country_id' => country3.id })
+
+sight22 = Sight.new( {'name' => 'Prado Museum', 'city_id' => city8.id, 'country_id' => country3.id })
+sight23 = Sight.new( {'name' => 'El Retiro Park', 'city_id' => city8.id, 'country_id' => country3.id })
+sight24 = Sight.new( {'name' => 'Royal Palace', 'city_id' => city8.id, 'country_id' => country3.id })
+
+sight25 = Sight.new( {'name' => 'Alhambra Palace', 'city_id' => city9.id, 'country_id' => country3.id })
+sight26 = Sight.new( {'name' => 'Albaicin District', 'city_id' => city9.id, 'country_id' => country3.id })
+sight27 = Sight.new( {'name' => 'Granada Cathedral', 'city_id' => city9.id, 'country_id' => country3.id })
+
+
+sight1.save()
+sight2.save()
+sight3.save()
+sight4.save()
+sight5.save()
+sight6.save()
+sight7.save()
+sight8.save()
+sight9.save()
+sight10.save()
+sight11.save()
+sight12.save()
+sight13.save()
+sight14.save()
+sight15.save()
+sight16.save()
+sight17.save()
+sight18.save()
+sight19.save()
+sight20.save()
+sight21.save()
+sight22.save()
+sight23.save()
+sight24.save()
+sight25.save()
+sight26.save()
+sight27.save()
