@@ -1,0 +1,63 @@
+body {
+  padding: 30px;
+  font-family: 'Nunito', sans-serif;
+  color: #1d3461;
+  background-image: url("trevi_fountain.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  background-color: #BCAB79;
+
+}
+
+img {
+opacity: 50;
+}
+
+
+a {
+  text-decoration: none;
+  color: #0B7189;
+}
+
+a:hover {
+  color: #1d3461;
+}
+
+ul {
+list-style-type: none;
+}
+
+#menu {
+  width: 220px;
+  margin: 0 auto;
+  background-color: white;
+  opacity:0.75;
+  text-align: center;
+  border: solid;
+  border-width: 5px;
+  border-color: #829cbc;
+}
+
+.menu-item {
+  display: block;
+  align-items: flex-end;
+  flex-grow: 1;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+}
+
+#logo {
+  text-align: center;
+  font-size: 60px;
+  background-color: white;
+  opacity:0.75;
+  border: solid;
+  border-width: 5px;
+  border-color: #829cbc;
+  padding: 10px;
+}
+
+}

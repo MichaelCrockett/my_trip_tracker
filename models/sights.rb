@@ -34,6 +34,9 @@ class Sight
     return Sight.map_items(sight_data)
   end
 
+  def self.map_items(sight_data)
+      return sight_data.map { |sight| Sight.new(sight) }
+  end
 
   def update()
       sql = "UPDATE sights

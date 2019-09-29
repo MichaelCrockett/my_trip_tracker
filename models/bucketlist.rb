@@ -33,4 +33,12 @@ def self.delete_all()
   SqlRunner.run(sql)
 end
 
+
+def self.all()
+    sql = "SELECT * FROM bucket_lists"
+    list_data = SqlRunner.run(sql)
+    sights = map_items(list_data)
+    return sights
+  end
+
 end #class end
