@@ -15,52 +15,35 @@ get '/' do
   erb( :index )
 end
 
-# new
+
 get '/sights' do
-  @sight = Sight.all
-  erb( :new )
+  "Page of sights"
 end
 
-# new
+
 get '/sights/new' do
-  @sight = Sight.all
-  erb( :new )
+  "Page to add new sights"
 end
 
-# show
+
 get '/bucketlist/:id' do
-  @bucketlist = BucketList.find(params['id'])
-  erb( :show )
+  "page to show user's bucketlist"
 end
 
-get '/students/:id' do
-  @student = Student.find(params['id'])
-  @house = House.find(@student.house_id)
-  erb( :show )
-end
+post 'sight' do
+ "page to create new sight"
+  end
 
-# create
-post '/sight' do
-  Sight.new(params).save
-  redirect '/bucketlist'
-end
-
-# edit
 get '/bucketlist/:id/edit' do
-  @bucketlist = Bucketlist.find(params['id'])
-  @sight = Sight.all
-  erb( :edit )
+ "Page to edit existing bucketlist"
 end
 
-# update
 put '/bucketlist/:id' do
-  Bucketlist.new(params).update
-  redirect '/bucketlist'
+  "route to update"
 end
 
-# destroy
 delete '/bucketlist/:id' do
-  bucketlist = Bucketlist.find(params['id'])
-  bucketlist.delete
-  redirect '/bucketlist'
+bucketlist = Bucketlist.find(params['id'])
+bucketlist.delete
+redirect '/bucketlist'
 end

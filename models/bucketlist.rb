@@ -33,6 +33,10 @@ def self.delete_all()
   SqlRunner.run(sql)
 end
 
+  def self.map_items(bucketlist_data)
+    return bucketlist_data.map { |bucketlist| BucketList.new(bucketlist) }
+  end
+
 
 def self.all()
     sql = "SELECT * FROM bucket_lists"
