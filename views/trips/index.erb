@@ -1,0 +1,12 @@
+<ul>
+  <% for trip in @trips %>
+  <li>
+    <%=trip.sight.name%>
+    <%if trip.visited == 't'%>
+    |  You have been!
+  <% else %>
+    |  This adventure is yet to come!
+    <%end%>
+  </li>
+<% end %>
+</ul>

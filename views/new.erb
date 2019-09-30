@@ -13,19 +13,23 @@
 
 
 <p>Or you can add a new sight here!</p>
+<p>Which city is the new sight in?</p>
 
 <form class="form-el" action="/sights/new" method="post">
 
 
 <select name="city_id" id="city_select">
-
   <% @cities.each do |city| %>
-  <option value="<%= city.id %>"><%= city.name %></option>
-  <% end %>
-  </select>
+    <option value="<%= city.id %>"><%= city.name %></option>
+    <% end %>
+    </select>
+
+    <p>If your city is not on this list, you can add it here
+      <a href="/cities/new">Add new city</a>
+    </p>
 
 
-       <label for="sight-name">What is the name of the new sight?</label>
+<label for="sight-name">What is the name of the new sight?</label>
          <input id="sight-name" type="text" name="name">
         <input type='submit' value="Add sight"/>
 </form>

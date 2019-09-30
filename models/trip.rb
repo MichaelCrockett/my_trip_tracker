@@ -43,8 +43,8 @@ end
  def self.all()
     sql = "SELECT * FROM trips"
     list_data = SqlRunner.run(sql)
-    sights = self.map_items(list_data)
-    return sights
+    trips = self.map_items(list_data)
+    return trips
   end
 
   def sight

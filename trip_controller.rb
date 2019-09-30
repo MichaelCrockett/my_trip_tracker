@@ -21,12 +21,11 @@ get '/sights/new' do
   erb( :new )
 end
 
-
 # save new sight
 post '/sights/new' do
   sight = Sight.new(params)
   sight.save
-  redirect '/sights'
+  redirect '/trips'
 end
 
 #show
@@ -46,20 +45,30 @@ get '/cities' do
   erb( :'cities/index' )
 end
 
-post '/cities/new' do
-  city = City.new(params)
-  city.save
-  redirect '/cities'
+get '/countries' do
+  @countries = Country.all
+  erb( :'countries/index' )
 end
 
-# # update
-# put '/sights/:id' do
-#   Sight.new(params).update
-#   redirect '/sights'
-# end
-#
-# post '/trips/new' do
-#   trip = Trip.new({'sight_id' => params['sight_id'], 'visited' => false})
-#   trip.save
-#   redirect '/sights'
-# end
+get '/cities/new' do
+  @countries = Country.all()
+  erb( :'cities/new')
+end
+
+post '/trips/new' do
+  trip = Trip.new({'sight_id' => params['sight_id'], 'visited' => false})
+  trip.save
+  redirect '/trips'
+end
+
+post '/cities' do
+  city = City.new(params)
+    city.save
+  redirect '/sights/new'
+  end
+
+  get '/trips' do
+    @trips = Trip.all()
+    erb( :'trips/index')
+
+  end
