@@ -12,7 +12,7 @@ require('pry')
 # index
 get '/' do
   @trips = Trip.all
-  erb( :index )
+  erb( :'trips/index')
 end
 
 get '/sights/new' do

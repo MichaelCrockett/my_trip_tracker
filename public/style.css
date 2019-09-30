@@ -81,6 +81,7 @@ list-style-type: none;
 }
 
 .form-1 {
+  width:280px;
   background-color: white;
   opacity:0.75;
   border: solid;
@@ -91,16 +92,19 @@ list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  vertical-align: middle;
+  text-align: center;
 }
 
 
-.form-label {
-  margin-bottom: 10px;
+label {
+  margin: 10px;
 }
 
 .prompt {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  margin: 10px
 }
 
 .medium-text {
