@@ -1,10 +1,10 @@
 <ul>
-  <% for list_item in @bucketlist %>
+  <% for list_item in @trip %>
   <li><%=list_item.sight.name%>
     <%if list_item.visited == 't'%>
-    true
+    |  You have been!
   <% else %>
-    false
+    |  This adventure is yet to come!
     <%end%>
   </li>
 <% end %>

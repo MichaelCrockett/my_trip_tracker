@@ -1,6 +1,6 @@
 require('sinatra')
 require('sinatra/reloader')
-require_relative('models/bucketlist')
+require_relative('models/trip')
 require_relative('models/cities')
 require_relative('models/countries')
 require_relative('models/sights')
@@ -11,36 +11,28 @@ require('pry')
 
 # index
 get '/' do
-  @bucketlist = BucketList.all
+  @trip = Trip.all
   erb( :index )
 end
 
-
 get '/sights' do
-  "Page of sights"
+  @trip = Trip.all
+  erb( :index )
 end
-
 
 get '/sights/new' do
   @sights = Sight.all
-  erb( :new)
+  erb( :new )
 end
 
-
-post 'sight' do
- "page to create new sight"
-  end
-
-get '/bucketlist/:id/edit' do
- "Page to edit existing bucketlist"
+# add new sight
+post '/sight' do
+  Sight.new(params).save
+  redirect '/sights'
 end
 
-put '/bucketlist/:id' do
-  "route to update"
-end
-
-delete '/bucketlist/:id' do
-bucketlist = Bucketlist.find(params['id'])
-bucketlist.delete
-redirect '/bucketlist'
+# update
+put '/sights/:id' do
+  Sight.new(params).update
+  redirect '/sights'
 end

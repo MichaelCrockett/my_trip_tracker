@@ -1,16 +1,17 @@
-<form action="/sight" method="post">
+<form class ="form-el" action="/sight" method="post">
 
-<label for="sight_select">Select Sight:</label>
+<label for="sight_select">Select from your exisiting list of sights:</label>
 <select name="sight_id" id="sight_select">
 
-#refer back to harry potter
-loop round them make an option for each
-
-  <option value=""></option>
+  <% @sights.each do |sight| %>
+  <option value="<%= sight.id %> "><%= sight.name %></option>
+  <% end %>
   </select>
 
+  <p>
+  Or you can add a new sight here!</p>
 
-  <br>
+<br>
   <label for="Sight_name">Sight name</label>
        <input id="sight-name" type="text" name="sight_name" />
 

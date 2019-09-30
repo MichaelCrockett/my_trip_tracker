@@ -59,3 +59,18 @@ list-style-type: none;
   border-color: #829cbc;
   padding: 10px;
 }
+
+.form-el {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 30px;
+  border: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form-label {
+  margin-bottom: 10px;
+}

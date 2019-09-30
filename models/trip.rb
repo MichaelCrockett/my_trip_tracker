@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 require_relative('./sights')
 require('pry')
 
-class BucketList
+class Trip
 
   attr_reader :id
   attr_accessor :sight_id, :visited

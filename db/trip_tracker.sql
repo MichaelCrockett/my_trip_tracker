@@ -1,4 +1,4 @@
-DROP TABLE bucket_lists;
+DROP TABLE trips;
 DROP TABLE sights;
 DROP TABLE countries;
 DROP TABLE cities;
@@ -23,7 +23,7 @@ CREATE TABLE sights (
   country_id int4 REFERENCES countries(id) ON DELETE CASCADE
 );
 
-CREATE TABLE bucket_lists (
+CREATE TABLE trips (
   id SERIAL4 primary key,
   sight_id int4 REFERENCES sights(id) ON DELETE CASCADE,
   visited BOOLEAN
