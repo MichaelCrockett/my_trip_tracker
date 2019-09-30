@@ -1,28 +1,31 @@
-<form class ="form-el" action="/sight" method="post">
+<form class ="form-el" action="/trips/new" method="post">
 
 <label for="sight_select">Select from your exisiting list of sights:</label>
 <select name="sight_id" id="sight_select">
 
   <% @sights.each do |sight| %>
-  <option value="<%= sight.id %> "><%= sight.name %></option>
+  <option value="<%= sight.id %>"><%= sight.name %></option>
   <% end %>
   </select>
 
-  <p>
-  Or you can add a new sight here!</p>
-
-<br>
-  <label for="Sight_name">Sight name</label>
-       <input id="sight-name" type="text" name="sight_name" />
+  <input type='submit' value="Add sight to your bucket list!"/>
+</form>
 
 
-     <label for="city-name">City-name:</label>
-       <input id="city-name" type="text" name="city-name">
+<p>Or you can add a new sight here!</p>
 
-       <label for="country-name">Country-name:</label>
-         <input id="city-name" type="text" name="city-name">
+<form class="form-el" action="/sights/new" method="post">
 
 
+<select name="city_id" id="city_select">
 
+  <% @cities.each do |city| %>
+  <option value="<%= city.id %>"><%= city.name %></option>
+  <% end %>
+  </select>
+
+
+       <label for="sight-name">What is the name of the new sight?</label>
+         <input id="sight-name" type="text" name="name">
         <input type='submit' value="Add sight"/>
 </form>

@@ -12,6 +12,7 @@ class City
   end
 
 
+
   def save()
     sql = "INSERT INTO cities
     (
@@ -56,6 +57,9 @@ class City
   end
 
 
+  def self.map_items(city_data)
+      return city_data.map { |city| City.new(city) }
+  end
 
 
 

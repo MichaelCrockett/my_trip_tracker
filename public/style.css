@@ -15,6 +15,10 @@ img {
 opacity: 50;
 }
 
+p {
+  display: block;
+  text-align: center;
+}
 
 a {
   text-decoration: none;

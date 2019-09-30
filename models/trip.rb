@@ -1,5 +1,5 @@
 require_relative('../db/sql_runner')
-require_relative('./sights')
+require_relative('./sight')
 require('pry')
 
 class Trip
@@ -16,7 +16,7 @@ end
 
 
   def save()
-    sql = "INSERT INTO bucket_lists
+    sql = "INSERT INTO trips
       (
       sight_id, visited
       )
@@ -25,23 +25,23 @@ end
         $1, $2)
         RETURNING id"
     values = [@sight_id, @visited]
-    bucket_list = SqlRunner.run(sql, values).first
-    @id = bucket_list['id'].to_i
+    trip = SqlRunner.run(sql, values).first
+    @id = trip['id'].to_i
   end
 
 
 def self.delete_all()
-  sql = "DELETE FROM bucket_lists"
+  sql = "DELETE FROM trips"
   SqlRunner.run(sql)
 end
 
-  def self.map_items(bucketlist_data)
-    return bucketlist_data.map { |bucketlist| BucketList.new(bucketlist) }
+  def self.map_items(trip_data)
+    return trip_data.map { |trip| Trip.new(trip) }
   end
 
 
  def self.all()
-    sql = "SELECT * FROM bucket_lists"
+    sql = "SELECT * FROM trips"
     list_data = SqlRunner.run(sql)
     sights = self.map_items(list_data)
     return sights
