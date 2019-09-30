@@ -2,17 +2,13 @@ body {
   padding: 30px;
   font-family: 'Nunito', sans-serif;
   color: #1d3461;
-  /* background-image: url("trevi_fountain.jpg"); */
+  background-image: url("trevi_fountain.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;
   background-color: #BCAB79;
 
-}
-
-img {
-opacity: 50;
 }
 
 p {
@@ -26,12 +22,32 @@ a {
 }
 
 a:hover {
-  color: #1d3461;
+  color: #BCAB79;
+}
+
+a:active {
+  color: black;
 }
 
 ul {
 list-style-type: none;
 }
+
+.trip-list {
+  background-color: white;
+  opacity: 0.75;
+  border: solid;
+  border-width: 5px;
+  border-color: #829cbc;
+  padding: 5px;
+}
+
+.list-item {
+  background-color: white;
+  opacity: 0.75;
+  padding: 5px;
+}
+
 
 #menu {
   width: 220px;
@@ -64,11 +80,14 @@ list-style-type: none;
   padding: 10px;
 }
 
-.form-el {
+.form-1 {
+  background-color: white;
+  opacity:0.75;
+  border: solid;
+  border-width: 5px;
+  border-color: #829cbc;
   padding: 10px;
   margin: 10px;
-  margin-top: 30px;
-  border: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,4 +96,18 @@ list-style-type: none;
 
 .form-label {
   margin-bottom: 10px;
+}
+
+.prompt {
+  display: flex;
+  justify-content: center
+}
+
+.medium-text {
+  font-size: 12px;
+  display: block;
+}
+
+.tiny-text {
+  font-size: 10px;
 }

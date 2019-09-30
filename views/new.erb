@@ -1,6 +1,6 @@
-<form class ="form-el" action="/trips/new" method="post">
+<form class ="form-1" action="/trips/new" method="post">
 
-<label for="sight_select">Select from your exisiting list of sights:</label>
+<label for="sight_select">Where Next?</label>
 <select name="sight_id" id="sight_select">
 
   <% @sights.each do |sight| %>
@@ -12,10 +12,11 @@
 </form>
 
 
-<p>Or you can add a new sight here!</p>
-<p>Which city is the new sight in?</p>
 
-<form class="form-el" action="/sights/new" method="post">
+
+<form class="form-1" action="/sights/new" method="post">
+  <div class="prompt">Or you can add a new sight here!</div>
+  <div class="prompt">Which city is the new sight in?</div>
 
 
 <select name="city_id" id="city_select">
@@ -23,13 +24,21 @@
     <option value="<%= city.id %>"><%= city.name %></option>
     <% end %>
     </select>
-
-    <p>If your city is not on this list, you can add it here
-      <a href="/cities/new">Add new city</a>
-    </p>
+    <div class="tiny-text">Don't see your city? Add it
+      <a href="/cities/new">here</a>
+    </div>
 
 
 <label for="sight-name">What is the name of the new sight?</label>
          <input id="sight-name" type="text" name="name">
-        <input type='submit' value="Add sight"/>
+        <input type='submit' value="Add to Where Next?"/>
 </form>
+
+
+<form class="form-1" action="/country/new" method="post">
+  <div class="prompt">You can even add a new country here!</div>
+
+  <label for="country-name"></label>
+           <input id="country-name" type="text" name="name">
+          <input type='submit' value="Add to Countries list"/>
+          </form>

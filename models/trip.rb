@@ -55,4 +55,11 @@ end
     return Sight.new(sights_data[0])
   end
 
+  def delete()
+    sql = "DELETE FROM trips
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 end #class end

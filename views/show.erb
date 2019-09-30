@@ -1,11 +1,7 @@
-<h2>Dummy text1</h2>
-
-<h3>Dummy Text2</h3>
-<h3>Dummy text3</h3>
+<h2><%= @sight.name %></h2>
 
 
-
-<form class="" action="/trip/" method="post">
+<form class="" action="/trip/<%= @trip.id %>" method="post">
     <input type="" name="_method" value="delete">
     <input type="submit" value="Delete trip">
   </form>

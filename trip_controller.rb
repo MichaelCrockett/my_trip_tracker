@@ -70,5 +70,10 @@ post '/cities' do
   get '/trips' do
     @trips = Trip.all()
     erb( :'trips/index')
-
   end
+
+  post '/country/new' do
+  country = Country.new({'name' => params['name']})
+  country.save
+  redirect '/trips'
+end

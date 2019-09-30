@@ -1,12 +1,16 @@
-<ul>
-  <% for trip in @trips %>
-  <li>
-    <%=trip.sight.name%>
-    <%if trip.visited == 't'%>
-    |  You have been!
+<ul class="trip-list">
+  <% for list_item in @trips %>
+  <li class="list-item">
+    <%=list_item.sight.name%>
+    <%if list_item.visited == 't'%>
+    |  Tick another one off!
   <% else %>
     |  This adventure is yet to come!
-    <%end%>
+  <%end%>
+  <div class="medium-text">
+    <i class="fas fa-times-circle"></i>  Delete
+    <i class="fas fa-edit"></i>  Edit
+  </div>
   </li>
-<% end %>
+  <% end %>
 </ul>
