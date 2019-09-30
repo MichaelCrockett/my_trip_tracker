@@ -1,6 +1,6 @@
 # My Trip Tracker
 
-This is a repo for my CodeClan solo project, which takes the form of an app which track's a user's travel adventures.
+This is a repo for my CodeClan solo project, which takes the form of an app which tracks a user's travel adventures.
 
 ## Travel Bucket List brief
 
