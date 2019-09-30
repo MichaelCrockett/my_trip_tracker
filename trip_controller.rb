@@ -22,13 +22,10 @@ end
 
 
 get '/sights/new' do
-  "Page to add new sights"
+  @sights = Sight.all
+  erb( :new)
 end
 
-
-get '/bucketlist/:id' do
-  "page to show user's bucketlist"
-end
 
 post 'sight' do
  "page to create new sight"

@@ -2,7 +2,7 @@ body {
   padding: 30px;
   font-family: 'Nunito', sans-serif;
   color: #1d3461;
-  background-image: url("trevi_fountain.jpg");
+  /* background-image: url("trevi_fountain.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
@@ -58,6 +58,4 @@ list-style-type: none;
   border-width: 5px;
   border-color: #829cbc;
   padding: 10px;
-}
-
 }

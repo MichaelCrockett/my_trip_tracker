@@ -108,3 +108,5 @@ sight27.save()
 
 bucket_list1 = BucketList.new({'sight_id' => sight1.id, 'visited' => false })
 bucket_list1.save()
+bucket_list2 = BucketList.new({'sight_id' => sight3.id, 'visited' => true })
+bucket_list2.save()

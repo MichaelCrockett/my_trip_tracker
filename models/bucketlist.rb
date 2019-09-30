@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner')
+require_relative('./sights')
+require('pry')
 
 class BucketList
 
@@ -38,11 +40,19 @@ end
   end
 
 
-def self.all()
+ def self.all()
     sql = "SELECT * FROM bucket_lists"
     list_data = SqlRunner.run(sql)
-    sights = map_items(list_data)
+    sights = self.map_items(list_data)
     return sights
+  end
+
+  def sight
+    sql = "SELECT * from sights
+    WHERE id = $1"
+    values = [@sight_id]
+    sights_data = SqlRunner.run(sql, values)
+    return Sight.new(sights_data[0])
   end
 
 end #class end

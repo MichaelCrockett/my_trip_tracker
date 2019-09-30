@@ -1,9 +1,11 @@
 <ul>
-  <li>
-    <a href="/bucketlist/"></a>
-    <a href="/sight/edit"> | Edit</a>
+  <% for list_item in @bucketlist %>
+  <li><%=list_item.sight.name%>
+    <%if list_item.visited == 't'%>
+    true
+  <% else %>
+    false
+    <%end%>
   </li>
+<% end %>
 </ul>
-
-
-<h1>Here will be a list of bucketlists or sights</h1>
