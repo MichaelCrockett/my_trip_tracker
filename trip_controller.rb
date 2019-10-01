@@ -75,5 +75,5 @@ post '/cities' do
   post '/country/new' do
   country = Country.new({'name' => params['name']})
   country.save
-  redirect '/trips'
+  redirect '/sights/new'
 end
