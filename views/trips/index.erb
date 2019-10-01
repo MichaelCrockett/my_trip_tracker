@@ -3,13 +3,12 @@
   <li class="list-item">
     <%=list_item.sight.name%>
     <%if list_item.visited == 't'%>
-    |  Tick another one off!
+    <i class="far fa-check-square"></i>  Tick another one off!
   <% else %>
-    |  This adventure is yet to come!
+    <i class="far fa-clock"></i>  This adventure is yet to come!
   <%end%>
   <div class="medium-text">
     <i class="fas fa-trash-alt"></i>
-
     <form class="" action="/trips/<%= list_item.id %>" method="post">
       <input type="hidden" name="_method" value="delete">
       <button type="submit">

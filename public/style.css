@@ -120,7 +120,9 @@ label {
 
 .medium-text {
   font-size: 12px;
-  display: block;
+  display: flex;
+  flex-basis: auto;
+  justify-content: center;
 }
 
 .tiny-text {
