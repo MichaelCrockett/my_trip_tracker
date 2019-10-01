@@ -86,11 +86,21 @@ post '/cities' do
   end
 
   get '/trips/:id/edit' do
-  trip = Trip.find(params["id"])
-  erb( :edit)
-end
+    trip = Trip.find(params["id"])
+    erb( :edit)
+  end
 
+  get '/sights/index/' do
+    @sights = Sight.all
+    erb( :'sights/index' )
+  end
 
-get '/edit' do
-  "Hello World"
-end
+  get '/cities/index/' do
+    @cities = City.all
+    erb( :'cities/index' )
+  end
+
+  get '/countries/index/' do
+    @countries = Country.all
+    erb( :'countries/index' )
+  end

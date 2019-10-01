@@ -22,16 +22,16 @@ p {
 }
 
 a {
+  color: #BCAB79;
   text-decoration: none;
-  color: #0B7189;
 }
 
 a:hover {
-  color: #BCAB79;
+  color: black;
 }
 
 a:active {
-  color: black;
+  color: white;
 }
 
 ul {
@@ -45,6 +45,7 @@ border-width: 5px;
 border-color: #7B6B43;
 text-align: center;
 margin: 0 auto;
+padding-inline-start: 0;
 }
 
 .trip-list {
@@ -62,12 +63,11 @@ margin: 0 auto;
   background-color: white;
   opacity: 0.75;
   padding: 5px;
-  /* display:inline-block; */
 }
 
 
 #menu {
-  width: 280px;
+  width: 300px;
   margin: 0 auto;
   background-color: white;
   opacity:0.75;

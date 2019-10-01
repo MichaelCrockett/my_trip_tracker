@@ -1,4 +1,8 @@
 require_relative('../db/sql_runner')
+require_relative('./sight')
+require_relative('./country')
+require_relative('./trip')
+require_relative('./city')
 
 class City
 

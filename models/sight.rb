@@ -1,5 +1,7 @@
 require_relative('../db/sql_runner')
-
+require_relative('./trip')
+require_relative('./city')
+require_relative('./country')
 class Sight
 
   attr_accessor :name, :city_id
