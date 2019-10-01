@@ -35,6 +35,7 @@ a:active {
 }
 
 ul {
+width: 280px;
 list-style-type: none;
 text-align: center;
 background-color: white;
@@ -42,6 +43,8 @@ opacity: 0.75;
 border: solid;
 border-width: 5px;
 border-color: #7B6B43;
+text-align: center;
+margin: 0 auto;
 }
 
 .trip-list {

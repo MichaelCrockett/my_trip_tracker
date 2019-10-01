@@ -89,3 +89,8 @@ post '/cities' do
   trip = Trip.find(params["id"])
   erb( :edit)
 end
+
+
+get '/edit' do
+  "Hello World"
+end
