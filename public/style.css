@@ -11,6 +11,11 @@ body {
 
 }
 
+h1 {
+  min-width: 280px;
+
+}
+
 p {
   display: block;
   text-align: center;
@@ -31,6 +36,12 @@ a:active {
 
 ul {
 list-style-type: none;
+text-align: center;
+background-color: white;
+opacity: 0.75;
+border: solid;
+border-width: 5px;
+border-color: #7B6B43;
 }
 
 .trip-list {
@@ -38,8 +49,9 @@ list-style-type: none;
   opacity: 0.75;
   border: solid;
   border-width: 5px;
-  border-color: #829cbc;
+  border-color: #7B6B43;
   padding: 5px;
+  text-align: center;
 }
 
 .list-item {
@@ -50,14 +62,14 @@ list-style-type: none;
 
 
 #menu {
-  width: 220px;
+  width: 280px;
   margin: 0 auto;
   background-color: white;
   opacity:0.75;
   text-align: center;
   border: solid;
   border-width: 5px;
-  border-color: #829cbc;
+  border-color: #7B6B43;
 }
 
 .menu-item {
@@ -76,7 +88,7 @@ list-style-type: none;
   opacity:0.75;
   border: solid;
   border-width: 5px;
-  border-color: #829cbc;
+  border-color: #7B6B43;
   padding: 10px;
 }
 
@@ -86,14 +98,11 @@ list-style-type: none;
   opacity:0.75;
   border: solid;
   border-width: 5px;
-  border-color: #829cbc;
+  border-color: #7B6B43;
   padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  vertical-align: middle;
-  text-align: center;
+  margin: 10px auto;
+  text-align: center
+
 }
 
 
