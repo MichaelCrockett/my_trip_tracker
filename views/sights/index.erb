@@ -1,7 +1,8 @@
 <ul>
-  <% for sight in @sights %>
+  <% for list_item in @sights %>
   <li class="list-item">
-    <%=sight.name%> <button type="button" name="button">Edit</button>
+    <%=list_item.name%>
+<a href="/sights/<%= list_item.id %>/edit">Edit</a>
   </li>
 <% end %>
 </ul>

@@ -61,7 +61,7 @@ post '/trips/new' do
   redirect '/trips'
 end
 
-post '/cities' do
+  post '/cities' do
   city = City.new(params)
     city.save
   redirect '/sights/new'
@@ -90,17 +90,47 @@ post '/cities' do
     erb( :edit)
   end
 
-  get '/sights/index/' do
+  get '/sights/index' do
     @sights = Sight.all
     erb( :'sights/index' )
   end
 
-  get '/cities/index/' do
+  get '/cities' do
     @cities = City.all
     erb( :'cities/index' )
   end
 
-  get '/countries/index/' do
+  get '/countries/index' do
     @countries = Country.all
     erb( :'countries/index' )
+  end
+
+  get '/sights/:id/edit' do
+    @sight = Sight.find(params["id"])
+    erb( :'sights/edit')
+  end
+
+  get '/cities/:id/edit' do
+    @city = City.find(params["id"])
+    erb( :'cities/edit')
+  end
+
+  get '/countries/:id/edit' do
+    @country = Country.find(params["id"])
+    erb( :'countries/edit')
+  end
+
+  put '/cities/:id' do
+    City.new(params).update
+    redirect '/cities'
+  end
+
+  put '/countries/:id' do
+    Country.new(params).update
+    redirect '/countries'
+  end
+
+  put '/sights/:id' do
+    Sight.new(params).update
+    redirect '/sights'
   end

@@ -1,7 +1,8 @@
 <ul>
-  <% for country in @countries %>
+  <% for list_item in @countries %>
   <li class="list-item">
-    <%=country.name%> <button type="button" name="button">Edit</button>
+    <%=list_item.name%>
+<a href="/countries/<%= list_item.id %>/edit">Edit</a>
   </li>
 <% end %>
 </ul>

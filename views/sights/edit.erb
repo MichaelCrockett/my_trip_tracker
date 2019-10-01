@@ -1,3 +1,8 @@
-<form class="" action="index.html" method="post">
+<form class="form-1" action="/sights/<%= @sight.id %>" method="post">
+  <input type="hidden" name="_method" value="put" />
 
+
+  <input type="text" name="name" value="<%= @sight.name %>">
+
+  <input type="submit" value="Save">
 </form>

@@ -48,15 +48,10 @@ class Sight
 
   def update()
       sql = "UPDATE sights
-      SET
-      (
-        name,
-        city_id,
-      ) =
-      (
-        $1,  $2,
-      )
-      WHERE id = $3"
+      SET name = $1,
+      city_id = $2,
+      country_id = $3
+      WHERE id = $4"
       values = [@name, @city_id, @country_id, @id]
       SqlRunner.run(sql, values)
   end
@@ -66,5 +61,8 @@ class Sight
     sql = "DELETE FROM sights"
     SqlRunner.run(sql)
   end
+
+
+
 
 end

@@ -32,14 +32,8 @@ class Country
 
   def update()
       sql = "UPDATE countries
-      SET
-      (
-        name,
-      ) =
-      (
-        $1,
-      )
-      WHERE id = $2"
+             SET name = $1
+             WHERE id = $2"
       values = [@name, @id]
       SqlRunner.run(sql, values)
   end
@@ -52,4 +46,24 @@ class Country
   def self.map_items(country_data)
       return country_data.map { |country| Country.new(country) }
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM countries
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    country = Country.new(result)
+    return country
+  end
+
+
+def self.find(id)
+  sql = "SELECT * FROM countries
+  WHERE id = $1"
+  values = [id]
+  result = SqlRunner.run(sql, values).first
+  country = Country.new(result)
+  return country
+end
+
 end #class end

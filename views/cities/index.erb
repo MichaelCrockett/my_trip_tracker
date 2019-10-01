@@ -1,7 +1,8 @@
 <ul>
-  <% for city in @cities %>
+  <% for list_item in @cities %>
   <li class="list-item">
-    <%=city.name%> <button type="button" name="button"><a href="cities/index"></a>Edit</button>
+    <%=list_item.name%>
+<a href="/cities/<%= list_item.id %>/edit">Edit</a>
   </li>
 <% end %>
 </ul>

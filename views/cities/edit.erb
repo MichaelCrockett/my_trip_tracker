@@ -1,5 +1,6 @@
-<form class="form-1" action="/trips/" method="post">
-  <input type="hidden" name="_method" value="put"
-
-  <h2>Edit <%= @city %></h2>
-  <form method="POST" action="/cities/<%= @city.id %>">
+<form class="form-1" action="/cities/<%= @city.id %>" method="post">
+  <input type="hidden" name="_method" value="put" />
+  <input type="hidden" name="country_id" value="<%= @city.country.id %>" />
+  <input type="text" name="name" value="<%= @city.name %>">
+  <input type="submit" value="Save">
+</form>

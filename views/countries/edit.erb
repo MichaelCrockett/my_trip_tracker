@@ -1,0 +1,5 @@
+<form class="form-1" action="/countries/<%= @country.id %>" method="post">
+  <input type="hidden" name="_method" value="put" />
+  <input type="text" name="name" value="<%= @country.name %>">
+  <input type="submit" value="Save">
+</form>
