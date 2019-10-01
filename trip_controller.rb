@@ -76,4 +76,11 @@ post '/cities' do
   country = Country.new({'name' => params['name']})
   country.save
   redirect '/sights/new'
-end
+  end
+
+
+  delete '/trips/:id' do
+    trip = Trip.find(params['id'])
+    trip.delete
+    redirect '/'
+  end

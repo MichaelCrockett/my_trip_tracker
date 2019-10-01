@@ -62,4 +62,13 @@ end
     SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM trips
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    trip = Trip.new(result)
+    return trip
+  end
+
 end #class end
