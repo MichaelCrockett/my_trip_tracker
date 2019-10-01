@@ -4,24 +4,22 @@
     <%=list_item.sight.name%>
     <%if list_item.visited == 't'%>
     <i class="far fa-check-square"></i>  Tick another one off!
-  <% else %>
+      <% else %>
     <i class="far fa-clock"></i>  This adventure is yet to come!
   <%end%>
-  <div class="medium-text">
-    <i class="fas fa-trash-alt"></i>
-    <form class="" action="/trips/<%= list_item.id %>" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <button type="submit">
-        Delete trip
-      </button>
-    </form>
 
 
-    <i class="fas fa-edit"></i>
-    <button type="button">
-      <a href="/trips/<%= list_item.id %>/edit">Edit trip</a>
-    </button>
-  </div>
-  </li>
+    <div class="medium-text">
+      <i class="fas fa-edit"></i>
+        <button type="button">
+          <a href="/trips/<%= list_item.id %>/edit">Edit</a>
+          </button>
+            <i class="fas fa-trash-alt"></i>
+              <form class="" action="/trips/<%= list_item.id %>" method="post">
+                <input type="hidden" name="_method" value="delete">
+          <button type="submit">Delete</button>
+      </form>
+      #</div>
+    </li>
   <% end %>
 </ul>

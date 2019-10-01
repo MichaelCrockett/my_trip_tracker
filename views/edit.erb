@@ -1,20 +1,26 @@
-<div class="form-wrapper">
+<form class="form-1" action="/trips/" method="post">
+  <input type="hidden" name="-method" value="put">
 
-
-<form class="form-el" action="/sights/" method="post">
-  <input type="hidden" name="_method" value="put">
-
-<label for="city_select">Select City:</label>
-<select name="city_id" id="city-select">
-  <option value=""></option>
-  </select>
-
-
-<div class="form-el">
-  <label for="country-name" class= "country-label">Country name:</label>
-  <input type="text" name="city_name" value="" />
+<div class="menu-item">
+  Edit country name
 </div>
+
+<div class="menu-item">
+  Edit city name
+</div>
+
+<div class="menu-item">
+  Edit sight name
+</div>
+
+<div class="menu-item">
+  Visited?
+  <label class="switch">
+  <input type="checkbox">
+</label>
+  </div>
+
+<button type="button">Save details</button>
 
 
 </form>
-</div>

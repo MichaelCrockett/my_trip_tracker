@@ -84,3 +84,8 @@ post '/cities' do
     trip.delete
     redirect '/'
   end
+
+  get '/trips/:id/edit' do
+  trip = Trip.find(params["id"])
+  erb( :edit)
+end
