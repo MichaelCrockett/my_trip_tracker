@@ -43,7 +43,7 @@ end
 
 
  def self.all()
-    sql = "SELECT * FROM trips"
+    sql = "SELECT * FROM trips ORDER BY id"
     list_data = SqlRunner.run(sql)
     trips = self.map_items(list_data)
     return trips
@@ -72,5 +72,23 @@ end
     trip = Trip.new(result)
     return trip
   end
+
+
+
+  def toggle_visited
+    if @visited == 't'
+      @visited = 'f'
+    elsif
+      @visited = 't'
+    end
+    sql = "UPDATE trips
+      SET visited = $1
+      WHERE id = $2"
+      values = [@visited, @id]
+      SqlRunner.run(sql, values)
+    end
+
+
+
 
 end #class end

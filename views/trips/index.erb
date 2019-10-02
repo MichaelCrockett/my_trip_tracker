@@ -3,13 +3,13 @@
   <li class="list-item">
     <%=list_item.sight.name%>
     <%if list_item.visited == 't'%>
-    <i class="far fa-check-square"></i> Tick it off!
+    <i class="far fa-check-square"></i><a href="/<%= list_item.id %>/trips-toggle">&nbspTick it off!</a>
       <% else %>
-    <i class="far fa-clock"></i>  Adventure awaits!
+    <i class="far fa-clock"></i><a href="/<%= list_item.id %>/trips-toggle"> &nbspAdventure awaits!</a>
+
   <%end%>
 
-
-    <div class="medium-text">
+  <div class="medium-text">
       <i class="fas fa-edit"></i>
         <button type="button">
           <a href="/trips/<%= list_item.id %>/edit">Edit</a>

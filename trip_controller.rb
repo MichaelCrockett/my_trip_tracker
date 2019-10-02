@@ -134,3 +134,9 @@ end
     Sight.new(params).update
     redirect '/sights'
   end
+
+  get '/:id/trips-toggle' do
+    trip = Trip.find(params["id"])
+    trip.toggle_visited
+    redirect to '/'
+  end
