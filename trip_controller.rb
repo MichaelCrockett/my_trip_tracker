@@ -25,7 +25,7 @@ end
 post '/sights/new' do
   sight = Sight.new(params)
   sight.save
-  redirect '/trips'
+  redirect '/sights/new'
 end
 
 #show
