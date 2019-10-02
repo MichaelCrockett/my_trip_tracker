@@ -87,7 +87,10 @@ padding-inline-start: 0;
 }
 
 #logo {
+  /* display: flex; */
+  width: fit-content;
   text-align: center;
+  margin: 10px auto;
   font-size: 60px;
   background-color: white;
   opacity:0.75;
@@ -106,7 +109,7 @@ padding-inline-start: 0;
   border-color: #7B6B43;
   padding: 10px;
   margin: 10px auto;
-  text-align: center
+  text-align: center;
 
 }
 
