@@ -2,7 +2,7 @@
   <% for list_item in @cities %>
   <li class="list-item">
     <%=list_item.name%>
-<a href="/cities/<%= list_item.id %>/edit">Edit</a>
+      <a href="/cities/<%= list_item.id %>/edit">Edit</a>
   </li>
 <% end %>
 </ul>

@@ -8,12 +8,10 @@ body {
   background-position: center top;
   background-size: cover;
   background-color: #BCAB79;
-
 }
 
 h1 {
   min-width: 280px;
-
 }
 
 p {
@@ -35,17 +33,17 @@ a:active {
 }
 
 ul {
-width: 280px;
-list-style-type: none;
-text-align: center;
-background-color: white;
-opacity: 0.75;
-border: solid;
-border-width: 5px;
-border-color: #7B6B43;
-text-align: center;
-margin: 0 auto;
-padding-inline-start: 0;
+  width: 280px;
+  list-style-type: none;
+  text-align: center;
+  background-color: white;
+  opacity: 0.75;
+  border: solid;
+  border-width: 5px;
+  border-color: #7B6B43;
+  text-align: center;
+  margin: 0 auto;
+  padding-inline-start: 0;
 }
 
 .trip-list {

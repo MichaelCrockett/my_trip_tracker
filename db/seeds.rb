@@ -112,3 +112,9 @@ trip2 = Trip.new({'sight_id' => sight3.id, 'visited' => true })
 trip2.save()
 trip3 = Trip.new({'sight_id' => sight17.id, 'visited' => false })
 trip3.save()
+
+trip4 = Trip.new({'sight_id' => sight24.id, 'visited' => true })
+trip4.save()
+
+trip5 = Trip.new({'sight_id' => sight13.id, 'visited' => false })
+trip3.save()

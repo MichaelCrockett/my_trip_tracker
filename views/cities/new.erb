@@ -1,16 +1,9 @@
-
 <form class="" action="/cities" method="post">
-
 <select name="country_id" id="country">
-
   <% @countries.each do |country| %>
-  <option value="<%= country.id %>"><%= country.name %></option>
+    <option value="<%= country.id %>"><%= country.name %></option>
   <% end %>
-  </select>
-
+</select>
 <input type="text" name="name" value="">
 <input type='submit' value="Add city to 'Where next?'"/>
-
-
-
 </form>

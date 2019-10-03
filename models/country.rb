@@ -17,8 +17,7 @@ class Country
 
   def save()
     sql = "INSERT INTO countries
-    (name) VALUES
-    ($1)
+    (name) VALUES ($1)
     RETURNING id"
     values = [@name]
     @id = SqlRunner.run( sql, values )[0]["id"].to_i()
@@ -47,14 +46,14 @@ class Country
       return country_data.map { |country| Country.new(country) }
   end
 
-  def self.find(id)
-    sql = "SELECT * FROM countries
-    WHERE id = $1"
-    values = [id]
-    result = SqlRunner.run(sql, values).first
-    country = Country.new(result)
-    return country
-  end
+def self.find(id)
+  sql = "SELECT * FROM countries
+  WHERE id = $1"
+  values = [id]
+  result = SqlRunner.run(sql, values).first
+  country = Country.new(result)
+  return country
+end
 
 
 def self.find(id)

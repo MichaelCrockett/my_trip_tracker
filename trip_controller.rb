@@ -62,9 +62,9 @@ post '/trips/new' do
 end
 
   post '/cities' do
-  city = City.new(params)
-    city.save
-  redirect '/sights/new'
+    city = City.new(params)
+      city.save
+    redirect '/sights/new'
   end
 
   get '/trips' do
@@ -73,70 +73,70 @@ end
   end
 
   post '/country/new' do
-  country = Country.new({'name' => params['name']})
-  country.save
-  redirect '/sights/new'
+    country = Country.new({'name' => params['name']})
+      country.save
+    redirect '/sights/new'
   end
 
 
-  delete '/trips/:id' do
-    trip = Trip.find(params['id'])
+delete '/trips/:id' do
+  trip = Trip.find(params['id'])
     trip.delete
-    redirect '/'
-  end
+  redirect '/'
+end
 
-  get '/trips/:id/edit' do
-    trip = Trip.find(params["id"])
-    erb( :edit)
-  end
+get '/trips/:id/edit' do
+  trip = Trip.find(params["id"])
+  erb( :edit)
+end
 
-  get '/sights/index' do
-    @sights = Sight.all
-    erb( :'sights/index' )
-  end
+get '/sights/index' do
+  @sights = Sight.all
+  erb( :'sights/index' )
+end
 
-  get '/cities' do
-    @cities = City.all
-    erb( :'cities/index' )
-  end
+get '/cities' do
+  @cities = City.all
+  erb( :'cities/index' )
+end
 
-  get '/countries/index' do
-    @countries = Country.all
-    erb( :'countries/index' )
-  end
+get '/countries/index' do
+  @countries = Country.all
+  erb( :'countries/index' )
+end
 
-  get '/sights/:id/edit' do
-    @sight = Sight.find(params["id"])
+get '/sights/:id/edit' do
+  @sight = Sight.find(params["id"])
     erb( :'sights/edit')
-  end
+end
 
-  get '/cities/:id/edit' do
-    @city = City.find(params["id"])
-    erb( :'cities/edit')
-  end
+get '/cities/:id/edit' do
+  @city = City.find(params["id"])
+  erb( :'cities/edit')
+end
 
-  get '/countries/:id/edit' do
-    @country = Country.find(params["id"])
-    erb( :'countries/edit')
-  end
+get '/countries/:id/edit' do
+  @country = Country.find(params["id"])
+  erb( :'countries/edit')
+end
 
-  put '/cities/:id' do
-    City.new(params).update
-    redirect '/cities'
-  end
+put '/cities/:id' do
+  City.new(params).update
+  redirect '/cities'
+end
 
-  put '/countries/:id' do
-    Country.new(params).update
-    redirect '/countries'
-  end
+put '/countries/:id' do
+  Country.new(params).update
+  redirect '/countries'
+end
 
-  put '/sights/:id' do
-    Sight.new(params).update
+put '/sights/:id' do
+  Sight.new(params).update
     redirect '/sights'
-  end
+end
 
-  get '/:id/trips-toggle' do
-    trip = Trip.find(params["id"])
+get '/:id/trips-toggle' do
+  trip = Trip.find(params["id"])
     trip.toggle_visited
-    redirect to '/'
-  end
+  redirect to '/'
+end

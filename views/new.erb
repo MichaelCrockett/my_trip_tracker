@@ -1,37 +1,33 @@
 <form class ="form-1" action="/trips/new" method="post">
-
-<label for="sight_select">Where Next?</label>
-<select name="sight_id" id="sight_select">
-
-  <% @sights.each do |sight| %>
-  <option value="<%= sight.id %>"><%= sight.name %></option>
+  <label for="sight_select">Where Next?</label>
+    <select name="sight_id" id="sight_select">
+      <% @sights.each do |sight| %>
+    <option value="<%= sight.id %>"><%= sight.name %></option>
   <% end %>
-  </select>
+</select>
 
-  <input type='submit' value="Add sight to your bucket list!"/>
+<input type='submit' value="Add sight to your bucket list!"/>
 </form>
 
 
 
 
 <form class="form-1" action="/sights/new" method="post">
-  <div class="prompt">Or you can add a new sight here</div>
+<div class="prompt">Or you can add a new sight here</div>
   <div class="prompt">Which city is the new sight in?</div>
-
-
-<select name="city_id" id="city_select">
+  <select name="city_id" id="city_select">
   <% @cities.each do |city| %>
     <option value="<%= city.id %>"><%= city.name %></option>
-    <% end %>
-    </select>
-    <div class="tiny-text">Don't see your city? Add it
-      <a href="/cities/new">here</a>
-    </div>
+  <% end %>
+</select>
+<div class="tiny-text">Don't see your city? Add it
+  <a href="/cities/new">here</a>
+</div>
 
 
 <label for="sight-name">What is the name of the new sight?</label>
-         <input id="sight-name" type="text" name="name">
-        <input type='submit' value="Add to Where Next?"/>
+    <input id="sight-name" type="text" name="name">
+    <input type='submit' value="Add to Where Next?"/>
 </form>
 
 
@@ -39,6 +35,6 @@
   <div class="prompt">Add a new country to the list here</div>
 
   <label for="country-name"></label>
-           <input id="country-name" type="text" name="name">
-          <input type='submit' value="Add to Countries list"/>
-          </form>
+    <input id="country-name" type="text" name="name">
+  <input type='submit' value="Add to Countries list"/>
+</form>

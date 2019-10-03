@@ -19,13 +19,10 @@ end
 
   def save()
     sql = "INSERT INTO trips
-      (
-      sight_id, visited
-      )
+      (sight_id, visited)
       VALUES
-      (
-        $1, $2)
-        RETURNING id"
+      ($1, $2)
+      RETURNING id"
     values = [@sight_id, @visited]
     trip = SqlRunner.run(sql, values).first
     @id = trip['id'].to_i
@@ -43,15 +40,16 @@ end
 
 
  def self.all()
-    sql = "SELECT * FROM trips ORDER BY id"
-    list_data = SqlRunner.run(sql)
+    sql = "SELECT * FROM trips
+          ORDER BY id"
+      list_data = SqlRunner.run(sql)
     trips = self.map_items(list_data)
     return trips
   end
 
   def sight
     sql = "SELECT * from sights
-    WHERE id = $1"
+          WHERE id = $1"
     values = [@sight_id]
     sights_data = SqlRunner.run(sql, values)
     return Sight.new(sights_data[0])
@@ -87,8 +85,5 @@ end
       values = [@visited, @id]
       SqlRunner.run(sql, values)
     end
-
-
-
 
 end #class end

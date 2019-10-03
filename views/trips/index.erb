@@ -2,9 +2,9 @@
   <% for list_item in @trips %>
   <li class="list-item">
     <%=list_item.sight.name%>
-    <%if list_item.visited == 't'%>
+      <%if list_item.visited == 't'%>
     <i class="far fa-check-square"></i><a href="/<%= list_item.id %>/trips-toggle">&nbspWelcome home!</a>
-      <% else %>
+        <% else %>
     <i class="far fa-clock"></i><a href="/<%= list_item.id %>/trips-toggle"> &nbspLet's go!</a>
 
   <%end%>
@@ -17,8 +17,8 @@
             <i class="fas fa-trash-alt"></i>
               <form class="" action="/trips/<%= list_item.id %>" method="post">
                 <input type="hidden" name="_method" value="delete">
-          <button type="submit">Delete</button>
-      </form>
+              <button type="submit">Delete</button>
+        </form>
       </div>
     </li>
   <% end %>

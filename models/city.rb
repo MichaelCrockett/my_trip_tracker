@@ -19,13 +19,8 @@ class City
 
   def save()
     sql = "INSERT INTO cities
-    (
-    name,
-    country_id
-    ) VALUES
-    (
-    $1, $2
-    )
+    (name, country_id) VALUES
+    ($1, $2)
     RETURNING id"
     values = [@name, @country_id]
     @id = SqlRunner.run( sql, values )[0]["id"].to_i()
@@ -35,21 +30,15 @@ class City
 
   def self.all()
     sql = "SELECT * FROM cities"
-    city_data = SqlRunner.run(sql)
+      city_data = SqlRunner.run(sql)
     return City.map_items(city_data)
   end
 
 
   def update()
       sql = "UPDATE cities
-      SET
-      (
-        name,
-        country_id
-      ) =
-      (
-        $1, $2
-      )
+      SET (name, country_id) =
+      ($1, $2)
       WHERE id = $3"
       values = [@name, @country_id, @id]
       SqlRunner.run(sql, values)
